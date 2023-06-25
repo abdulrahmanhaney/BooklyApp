@@ -1,7 +1,7 @@
 import 'package:bookly_app/core/utils/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'Features/Splash/persentation/views/splash_view.dart';
+import 'Features/Splash/view/splash_view.dart';
 import 'core/utils/app_routs.dart';
 import 'generated/l10n.dart';
 
