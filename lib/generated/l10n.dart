@@ -59,6 +59,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Read Free Books`
+  String get SplashText {
+    return Intl.message(
+      'Read Free Books',
+      name: 'SplashText',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -6,5 +6,6 @@ ThemeData mainTheme() {
     useMaterial3: true,
     scaffoldBackgroundColor: kPrimaryColor,
     primaryColor: kPrimaryColor,
+    brightness: Brightness.dark,
   );
 }
