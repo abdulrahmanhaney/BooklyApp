@@ -1,5 +1,7 @@
+import 'package:bookly_app/core/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'Features/Splash/persentation/views/splash_view.dart';
 import 'generated/l10n.dart';
 
 void main() {
@@ -12,6 +14,7 @@ class BooklyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: const [
         S.delegate,
         GlobalMaterialLocalizations.delegate,
@@ -19,16 +22,9 @@ class BooklyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
+      locale: const Locale('en'),
+      theme: appTheme(),
       home: const SplashView(),
     );
-  }
-}
-
-class SplashView extends StatelessWidget {
-  const SplashView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold();
   }
 }
