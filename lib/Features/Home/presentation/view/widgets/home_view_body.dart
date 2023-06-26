@@ -2,6 +2,7 @@ import 'package:bookly_app/Features/Home/presentation/view/widgets/top_home_list
 import 'package:bookly_app/core/utils/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../generated/l10n.dart';
 import 'best_seller_list_view.dart';
 import 'custom_app_bar.dart';
 
@@ -10,23 +11,23 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomAppBar(),
-          TopListHome(),
-          SizedBox(
+          const CustomAppBar(),
+          const TopListHome(),
+          const SizedBox(
             height: 30,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 30),
+            padding: const EdgeInsets.only(left: 30),
             child: Text(
-              'Best Seller',
+              S.of(context).BestSeller,
               style: TextStyles.s18,
             ),
           ),
-          BestSellerListView(),
+          const BestSellerListView(),
         ],
       ),
     );

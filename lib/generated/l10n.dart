@@ -69,6 +69,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Best Seller`
+  String get BestSeller {
+    return Intl.message(
+      'Best Seller',
+      name: 'BestSeller',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

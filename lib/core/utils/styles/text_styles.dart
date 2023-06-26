@@ -13,4 +13,8 @@ class TextStyles {
     fontSize: 20,
     fontWeight: FontWeight.w600,
   );
+  static const s14 = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w600,
+  );
 }

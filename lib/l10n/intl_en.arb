@@ -1,4 +1,5 @@
 {
   "AppName" : "Bookly App",
-  "SplashText" : "Read Free Books"
+  "SplashText" : "Read Free Books",
+  "BestSeller" : "Best Seller"
 }

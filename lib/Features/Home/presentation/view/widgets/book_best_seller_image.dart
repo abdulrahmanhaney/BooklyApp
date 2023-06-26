@@ -5,8 +5,8 @@ import '../../../../../core/utils/assets_data.dart';
 class BookBestSellerItemImage extends StatelessWidget {
   const BookBestSellerItemImage({
     super.key,
-    this.hight = 130,
-    this.width = 90,
+    this.hight = 110,
+    this.width = 80,
   });
 
   final double hight;
