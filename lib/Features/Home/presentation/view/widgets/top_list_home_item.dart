@@ -3,9 +3,16 @@ import 'package:flutter/material.dart';
 import '../../../../../core/utils/assets_data.dart';
 
 class TopListHomeItem extends StatelessWidget {
-  const TopListHomeItem({super.key, required this.index});
+  const TopListHomeItem({
+    super.key,
+    required this.index,
+    this.hight = 224,
+    this.width = 150,
+  });
 
   final int index;
+  final double hight;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
