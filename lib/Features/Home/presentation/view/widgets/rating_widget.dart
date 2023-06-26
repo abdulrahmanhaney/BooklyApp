@@ -19,7 +19,7 @@ class RatingWidget extends StatelessWidget {
         ),
         Text(
           '4.3',
-          style: TextStyles.s14,
+          style: TextStyles.s12,
         )
       ],
     );

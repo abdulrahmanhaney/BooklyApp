@@ -10,7 +10,7 @@ class BestSellerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 30, top: 20, right: 50),
+      padding: const EdgeInsets.only(left: 30, top: 10, right: 50),
       child: SizedBox(
         height: 110,
         child: Row(
@@ -35,7 +35,7 @@ class BestSellerItem extends StatelessWidget {
                     children: [
                       const Text(
                         '19.99' ' €',
-                        style: TextStyles.s16,
+                        style: TextStyles.s14,
                       ),
                       const Spacer(),
                       const RatingWidget(),
@@ -44,7 +44,7 @@ class BestSellerItem extends StatelessWidget {
                       ),
                       Text(
                         '(2390)',
-                        style: TextStyles.s14
+                        style: TextStyles.s12
                             .copyWith(fontWeight: FontWeight.w400),
                       ),
                     ],

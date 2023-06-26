@@ -1,35 +1,42 @@
+import 'package:bookly_app/Features/Home/presentation/view/widgets/custom_app_bar.dart';
 import 'package:bookly_app/Features/Home/presentation/view/widgets/top_home_list.dart';
-import 'package:bookly_app/core/utils/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../../core/utils/styles/text_styles.dart';
 import '../../../../../generated/l10n.dart';
 import 'best_seller_list_view.dart';
-import 'custom_app_bar.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const CustomAppBar(),
-          const TopListHome(),
-          const SizedBox(
-            height: 30,
+    return CustomScrollView(
+      slivers: [
+        SliverAppBar(
+          backgroundColor: Theme.of(context).primaryColor,
+          title: const CustomAppBar(),
+          pinned: true,
+        ),
+        SliverToBoxAdapter(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const TopListHome(),
+              Padding(
+                padding: const EdgeInsets.only(left: 30, bottom: 10, top: 30),
+                child: Text(
+                  S.of(context).BestSeller,
+                  style: TextStyles.s18,
+                ),
+              ),
+            ],
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              S.of(context).BestSeller,
-              style: TextStyles.s18,
-            ),
-          ),
-          const BestSellerListView(),
-        ],
-      ),
+        ),
+        const SliverFillRemaining(
+          child: BestSellerListView(),
+        )
+      ],
     );
   }
 }
