@@ -23,8 +23,8 @@ class TopListHomeItem extends StatelessWidget {
           height: 224,
           width: 150,
           margin: index == 0
-              ? const EdgeInsets.only(left: 30)
-              : const EdgeInsets.only(left: 15),
+              ? const EdgeInsets.only(left: 30, right: 15)
+              : const EdgeInsets.only(right: 15),
           decoration: BoxDecoration(
             border: Border.all(color: Colors.white.withOpacity(0.5)),
             borderRadius: const BorderRadius.all(Radius.circular(20)),
@@ -38,7 +38,7 @@ class TopListHomeItem extends StatelessWidget {
         ),
         Positioned(
           bottom: 10,
-          right: 2,
+          right: 20,
           child: IconButton(
             onPressed: () {},
             icon: Icon(

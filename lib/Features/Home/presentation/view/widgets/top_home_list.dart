@@ -11,6 +11,7 @@ class TopListHome extends StatelessWidget {
       child: ListView.builder(
         padding: EdgeInsets.zero,
         scrollDirection: Axis.horizontal,
+        itemCount: 10,
         itemBuilder: (context, index) {
           return TopListHomeItem(
             index: index,
