@@ -1,5 +1,5 @@
-import 'package:bookly_app/Features/Home/presentation/view/widgets/custom_app_bar.dart';
-import 'package:bookly_app/Features/Home/presentation/view/widgets/top_home_list.dart';
+import 'package:bookly_app/Features/Home/presentation/views/widgets/custom_app_bar.dart';
+import 'package:bookly_app/Features/Home/presentation/views/widgets/top_home_list.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles/text_styles.dart';
@@ -15,6 +15,7 @@ class HomeViewBody extends StatelessWidget {
       slivers: [
         SliverAppBar(
           backgroundColor: Theme.of(context).primaryColor,
+          elevation: 0,
           title: const CustomAppBar(),
           pinned: true,
         ),

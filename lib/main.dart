@@ -1,7 +1,8 @@
 import 'package:bookly_app/core/utils/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'Features/Home/presentation/view/home_view.dart';
+import 'Features/Home/presentation/views/book_detail_view.dart';
+import 'Features/Home/presentation/views/home_view.dart';
 import 'Features/Splash/presentation/view/splash_view.dart';
 import 'generated/l10n.dart';
 
@@ -19,6 +20,7 @@ class BooklyApp extends StatelessWidget {
       routes: {
         SplashView.id: (context) => const SplashView(),
         HomeView.id: (context) => const HomeView(),
+        BookDetailsView.id: (context) => const BookDetailsView(),
       },
       initialRoute: SplashView.id,
       localizationsDelegates: const [

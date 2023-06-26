@@ -1,4 +1,4 @@
-import 'package:bookly_app/Features/Home/presentation/view/widgets/top_list_home_item.dart';
+import 'package:bookly_app/Features/Home/presentation/views/widgets/top_list_home_item.dart';
 import 'package:flutter/material.dart';
 
 class TopListHome extends StatelessWidget {
