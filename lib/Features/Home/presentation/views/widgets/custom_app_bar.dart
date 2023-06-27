@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/Search/presentation/views/search_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/assets_data.dart';
@@ -18,7 +19,9 @@ class CustomAppBar extends StatelessWidget {
         ),
         const Spacer(),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, SearchView.id);
+          },
           icon: Image.asset(
             AssetsData.searchIcon,
             height: 24,

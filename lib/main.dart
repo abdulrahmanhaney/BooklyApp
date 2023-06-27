@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/Search/presentation/views/search_view.dart';
 import 'package:bookly_app/core/utils/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -21,6 +22,7 @@ class BooklyApp extends StatelessWidget {
         SplashView.id: (context) => const SplashView(),
         HomeView.id: (context) => const HomeView(),
         BookDetailsView.id: (context) => const BookDetailsView(),
+        SearchView.id: (context) => const SearchView(),
       },
       initialRoute: SplashView.id,
       localizationsDelegates: const [
