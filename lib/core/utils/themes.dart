@@ -8,6 +8,13 @@ class Themes {
         scaffoldBackgroundColor: kPrimaryColor,
         primaryColor: kPrimaryColor,
         brightness: Brightness.dark,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: kPrimaryColor,
+          foregroundColor: Colors.white,
+          iconTheme: IconThemeData(
+            color: Colors.white,
+          ),
+        ),
         textTheme: GoogleFonts.montserratTextTheme(ThemeData.dark().textTheme),
       );
 }

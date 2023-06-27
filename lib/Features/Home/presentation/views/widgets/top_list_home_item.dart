@@ -1,3 +1,4 @@
+import 'package:bookly_app/Features/Home/presentation/views/book_detail_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/assets_data.dart';
@@ -16,43 +17,51 @@ class TopListHomeItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        Container(
-          height: 224,
-          width: 150,
-          margin: index == 0
-              ? const EdgeInsets.only(left: 30, right: 15)
-              : const EdgeInsets.only(right: 15),
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.white.withOpacity(0.5)),
-            borderRadius: const BorderRadius.all(Radius.circular(20)),
-            image: const DecorationImage(
-              image: NetworkImage(
-                AssetsData.testImage,
-              ),
-              fit: BoxFit.fill,
-            ),
-          ),
-        ),
-        Positioned(
-          bottom: 10,
-          right: 20,
-          child: IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.play_arrow_rounded,
-              color: Theme.of(context).primaryColor.withOpacity(0.6),
-            ),
-            style: ButtonStyle(
-              backgroundColor: MaterialStatePropertyAll(
-                Colors.white.withOpacity(0.7),
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, BookDetailsView.id);
+      },
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Container(
+            height: 224,
+            width: 150,
+            margin: index == 0
+                ? const EdgeInsets.only(left: 30, right: 15)
+                : const EdgeInsets.only(right: 15),
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.5),
+              border: Border.all(color: Colors.white.withOpacity(0.5)),
+              borderRadius: const BorderRadius.all(Radius.circular(20)),
+              image: const DecorationImage(
+                image: NetworkImage(
+                  AssetsData.testImage,
+                ),
+                fit: BoxFit.fill,
               ),
             ),
           ),
-        ),
-      ],
+          Positioned(
+            bottom: 10,
+            right: 20,
+            child: IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, BookDetailsView.id);
+              },
+              icon: Icon(
+                Icons.play_arrow_rounded,
+                color: Theme.of(context).primaryColor.withOpacity(0.6),
+              ),
+              style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(
+                  Colors.white.withOpacity(0.7),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
