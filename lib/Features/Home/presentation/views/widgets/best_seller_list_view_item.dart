@@ -29,7 +29,7 @@ class BestSellerItem extends StatelessWidget {
                   children: [
                     const Text(
                       'Harry Potter and the Goblet of Fire',
-                      style: TextStyles.s16,
+                      style: TextStyles.cs16,
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                     ),
