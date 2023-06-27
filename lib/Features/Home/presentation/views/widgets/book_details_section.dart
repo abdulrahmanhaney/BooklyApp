@@ -1,11 +1,12 @@
 import 'package:bookly_app/Features/Home/presentation/views/widgets/rating_widget.dart';
+import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles/text_styles.dart';
 import 'book_best_seller_image.dart';
 
-class BookDetilsTop extends StatelessWidget {
-  const BookDetilsTop({super.key});
+class BookDetilsSection extends StatelessWidget {
+  const BookDetilsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,21 +15,28 @@ class BookDetilsTop extends StatelessWidget {
         const SizedBox(
           height: 30,
         ),
-        const Align(
+        Align(
           alignment: Alignment.center,
           child: BookImage(
-            hight: 260,
-            width: 170,
+            hight: MediaQuery.of(context).size.height / 4,
             radius: 20,
           ),
         ),
         const SizedBox(
           height: 30,
         ),
-        const Text(
-          'The Jungle Book',
-          textAlign: TextAlign.center,
-          style: TextStyles.s20,
+        SizedBox(
+          width: MediaQuery.of(context).size.width * 0.7,
+          child: Text(
+            'Harry Potter and the Goblet of Fire',
+            overflow: TextOverflow.ellipsis,
+            textAlign: TextAlign.center,
+            maxLines: 2,
+            style: TextStyles.s20.copyWith(
+              fontFamily: kFGrilli,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
         ),
         const SizedBox(
           height: 10,

@@ -1,24 +1,27 @@
+import 'package:bookly_app/Features/Home/presentation/views/book_detail_view.dart';
 import 'package:bookly_app/Features/Home/presentation/views/widgets/book_best_seller_image.dart';
 import 'package:bookly_app/core/utils/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
-class OtherBooksListView extends StatelessWidget {
-  const OtherBooksListView({super.key});
+class OtherBooksSection extends StatelessWidget {
+  const OtherBooksSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return SizedBox(
+      height: 200,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Padding(
-            padding: EdgeInsets.only(left: 30, top: 20),
+            padding: EdgeInsets.only(left: 30, bottom: 30),
             child: Text(
               'You can also like',
               style: TextStyles.s14,
             ),
           ),
-          Expanded(
+          SizedBox(
+            height: 130,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 30,
@@ -27,9 +30,14 @@ class OtherBooksListView extends StatelessWidget {
                   padding: index == 0
                       ? const EdgeInsets.only(left: 30, right: 10)
                       : const EdgeInsets.only(right: 10),
-                  child: const Align(
+                  child: Align(
                     alignment: Alignment.center,
-                    child: BookImage(hight: 130, width: 90),
+                    child: BookImage(
+                      hight: MediaQuery.of(context).size.height / 7,
+                      onTap: () {
+                        Navigator.pushNamed(context, BookDetailsView.id);
+                      },
+                    ),
                   ),
                 );
               },

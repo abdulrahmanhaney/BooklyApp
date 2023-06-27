@@ -13,7 +13,6 @@ class TextStyles {
   );
   static const cs16 = TextStyle(
     fontSize: 16,
-    fontWeight: FontWeight.w600,
     fontFamily: kFGrilli,
   );
   static const s14 = TextStyle(
