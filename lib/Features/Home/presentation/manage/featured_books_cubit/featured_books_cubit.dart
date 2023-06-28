@@ -1,13 +1,17 @@
-import 'package:bookly_app/Features/Home/data/repos/home_repo.dart';
-import 'package:bookly_app/Features/Home/presentation/manage/featured_books_cubit/featured_books_status.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:bloc/bloc.dart';
+import 'package:equatable/equatable.dart';
 
-class FeaturedBooksCubit extends Cubit<FeaturedBooksStatus> {
+import '../../../data/models/book_model/book_model.dart';
+import '../../../data/repos/home_repo.dart';
+
+part 'featured_books_state.dart';
+
+class FeaturedBooksCubit extends Cubit<FeaturedBooksState> {
   FeaturedBooksCubit(this.homeRepo) : super(FeaturedBooksIninial());
 
   final HomeRepo homeRepo;
 
-  Future<void> getFeaturedBooks() async {
+  Future<void> getFeatuerdBooks() async {
     emit(FeaturedBooksLoading());
     var result = await homeRepo.fetchFeaturedBooks();
     result.fold(
