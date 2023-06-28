@@ -25,8 +25,8 @@ class TopListHomeItem extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Container(
-            height: 224,
-            width: 150,
+            height: index == 0 ? 224 : 200,
+            width: index == 0 ? 150 : 137,
             margin: index == 0
                 ? const EdgeInsets.only(left: 30, right: 15)
                 : const EdgeInsets.only(right: 15),
@@ -43,8 +43,8 @@ class TopListHomeItem extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 10,
-            right: 20,
+            bottom: index == 0 ? 10 : 20,
+            right: index == 0 ? 20 : 22,
             child: IconButton(
               onPressed: () {
                 Navigator.pushNamed(context, BookDetailsView.id);

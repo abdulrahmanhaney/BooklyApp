@@ -15,7 +15,7 @@ class BestSellerItem extends StatelessWidget {
         Navigator.pushNamed(context, BookDetailsView.id);
       },
       child: Padding(
-        padding: const EdgeInsets.only(left: 30, top: 10, right: 50),
+        padding: const EdgeInsets.only(left: 35, top: 10, right: 35),
         child: SizedBox(
           height: 110,
           child: Row(

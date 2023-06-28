@@ -35,12 +35,10 @@ class HomeViewBody extends StatelessWidget {
                   style: TextStyles.s18,
                 ),
               ),
+              const BestSellerListView(),
             ],
           ),
         ),
-        const SliverFillRemaining(
-          child: BestSellerListView(),
-        )
       ],
     );
   }

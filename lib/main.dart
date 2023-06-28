@@ -1,5 +1,5 @@
 import 'package:bookly_app/Features/Search/presentation/views/search_view.dart';
-import 'package:bookly_app/core/utils/themes.dart';
+import 'package:bookly_app/core/utils/styles/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'Features/Home/presentation/views/book_detail_view.dart';
