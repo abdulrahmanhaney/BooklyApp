@@ -1,4 +1,4 @@
-import 'package:bookly_app/Features/Home/presentation/views/widgets/best_seller_list_view.dart';
+import 'package:bookly_app/Features/Search/presentation/views/widgets/search_result_list_view.dart';
 import 'package:bookly_app/Features/Search/presentation/views/widgets/search_text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +11,7 @@ class SearchViewBody extends StatelessWidget {
       child: Column(
         children: [
           SearchTextField(),
-          BestSellerListView(),
+          SearchResultListView(),
         ],
       ),
     );
