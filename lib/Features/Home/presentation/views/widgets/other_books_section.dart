@@ -1,5 +1,5 @@
 import 'package:bookly_app/Features/Home/presentation/views/book_detail_view.dart';
-import 'package:bookly_app/Features/Home/presentation/views/widgets/book_best_seller_image.dart';
+import 'package:bookly_app/Features/Home/presentation/views/widgets/book_image_widget.dart';
 import 'package:bookly_app/core/utils/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 
@@ -32,7 +32,7 @@ class OtherBooksSection extends StatelessWidget {
                       : const EdgeInsets.only(right: 10),
                   child: Align(
                     alignment: Alignment.center,
-                    child: BookImage(
+                    child: BookImageWidget(
                       hight: MediaQuery.of(context).size.height / 7,
                       onTap: () {
                         Navigator.pushNamed(context, BookDetailsView.id);

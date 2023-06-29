@@ -16,6 +16,8 @@ class VolumeInfo extends Equatable {
   final num? pageCount;
   final String? printType;
   final List<String>? categories;
+  final num? averageRating;
+  final num? ratingsCount;
   final String? maturityRating;
   final bool? allowAnonLogging;
   final String? contentVersion;
@@ -37,6 +39,8 @@ class VolumeInfo extends Equatable {
     this.pageCount,
     this.printType,
     this.categories,
+    this.averageRating,
+    this.ratingsCount,
     this.maturityRating,
     this.allowAnonLogging,
     this.contentVersion,
@@ -65,6 +69,8 @@ class VolumeInfo extends Equatable {
         pageCount: num.tryParse(json['pageCount'].toString()),
         printType: json['printType']?.toString(),
         categories: List<String>.from(json['categories'] ?? []),
+        averageRating: num.tryParse(json['averageRating'].toString()),
+        ratingsCount: num.tryParse(json['ratingsCount'].toString()),
         maturityRating: json['maturityRating']?.toString(),
         allowAnonLogging: json['allowAnonLogging']?.toString().contains("true"),
         contentVersion: json['contentVersion']?.toString(),
@@ -95,6 +101,8 @@ class VolumeInfo extends Equatable {
         if (pageCount != null) 'pageCount': pageCount,
         if (printType != null) 'printType': printType,
         if (categories != null) 'categories': categories,
+        if (averageRating != null) 'averageRating': averageRating,
+        if (ratingsCount != null) 'ratingsCount': ratingsCount,
         if (maturityRating != null) 'maturityRating': maturityRating,
         if (allowAnonLogging != null) 'allowAnonLogging': allowAnonLogging,
         if (contentVersion != null) 'contentVersion': contentVersion,
@@ -121,6 +129,8 @@ class VolumeInfo extends Equatable {
       pageCount,
       printType,
       categories,
+      averageRating,
+      ratingsCount,
       maturityRating,
       allowAnonLogging,
       contentVersion,

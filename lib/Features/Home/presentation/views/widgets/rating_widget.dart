@@ -3,22 +3,24 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class RatingWidget extends StatelessWidget {
-  const RatingWidget({super.key});
+  const RatingWidget({super.key, required this.rating});
+
+  final double rating;
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
-        Icon(
+        const Icon(
           FontAwesomeIcons.solidStar,
           size: 14,
           color: Colors.yellow,
         ),
-        SizedBox(
+        const SizedBox(
           width: 5,
         ),
         Text(
-          '4.3',
+          rating.toString(),
           style: TextStyles.s12,
         )
       ],

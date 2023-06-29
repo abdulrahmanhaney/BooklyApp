@@ -3,7 +3,7 @@ import 'package:bookly_app/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utils/styles/text_styles.dart';
-import 'book_best_seller_image.dart';
+import 'book_image_widget.dart';
 
 class BookDetilsSection extends StatelessWidget {
   const BookDetilsSection({super.key});
@@ -17,7 +17,7 @@ class BookDetilsSection extends StatelessWidget {
         ),
         Align(
           alignment: Alignment.center,
-          child: BookImage(
+          child: BookImageWidget(
             hight: MediaQuery.of(context).size.height / 4,
             radius: 20,
           ),
@@ -52,7 +52,9 @@ class BookDetilsSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const RatingWidget(),
+            const RatingWidget(
+              rating: 0.0,
+            ),
             const SizedBox(
               width: 10,
             ),

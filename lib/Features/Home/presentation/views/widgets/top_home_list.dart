@@ -17,7 +17,8 @@ class TopListHome extends StatelessWidget {
             return ListView.builder(
               padding: EdgeInsets.zero,
               scrollDirection: Axis.horizontal,
-              itemCount: 10,
+              itemCount: state.books.length,
+              physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) {
                 return TopListHomeItem(
                   index: index,

@@ -1,5 +1,6 @@
 import 'package:bookly_app/Features/Home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/Features/Home/presentation/views/book_detail_view.dart';
+import 'package:bookly_app/Features/Home/presentation/views/widgets/book_image_widget.dart';
 import 'package:flutter/material.dart';
 
 class TopListHomeItem extends StatelessWidget {
@@ -32,15 +33,12 @@ class TopListHomeItem extends StatelessWidget {
                 ? const EdgeInsets.only(left: 30, right: 15)
                 : const EdgeInsets.only(right: 15),
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.5),
+              color: Colors.white.withOpacity(0.3),
               border: Border.all(color: Colors.white.withOpacity(0.5)),
               borderRadius: const BorderRadius.all(Radius.circular(20)),
-              image: DecorationImage(
-                image: NetworkImage(
-                  bookModel.volumeInfo!.imageLinks!.thumbnail!,
-                ),
-                fit: BoxFit.fill,
-              ),
+            ),
+            child: BookImageWidget(
+              imageUrl: bookModel.volumeInfo!.imageLinks!.thumbnail!,
             ),
           ),
           Positioned(
