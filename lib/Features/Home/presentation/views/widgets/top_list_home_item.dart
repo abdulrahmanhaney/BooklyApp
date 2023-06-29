@@ -1,7 +1,6 @@
+import 'package:bookly_app/Features/Home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/Features/Home/presentation/views/book_detail_view.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../../core/utils/assets_data.dart';
 
 class TopListHomeItem extends StatelessWidget {
   const TopListHomeItem({
@@ -9,11 +8,13 @@ class TopListHomeItem extends StatelessWidget {
     required this.index,
     this.hight = 224,
     this.width = 150,
+    required this.bookModel,
   });
 
   final int index;
   final double hight;
   final double width;
+  final BookModel bookModel;
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +35,9 @@ class TopListHomeItem extends StatelessWidget {
               color: Colors.white.withOpacity(0.5),
               border: Border.all(color: Colors.white.withOpacity(0.5)),
               borderRadius: const BorderRadius.all(Radius.circular(20)),
-              image: const DecorationImage(
+              image: DecorationImage(
                 image: NetworkImage(
-                  AssetsData.testImage,
+                  bookModel.volumeInfo!.imageLinks!.thumbnail!,
                 ),
                 fit: BoxFit.fill,
               ),
